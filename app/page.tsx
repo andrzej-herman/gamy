@@ -48,7 +48,7 @@ export default function Home() {
                 </h1>
               </div>
               <p className="text-gray-600 text-lg font-semibold">
-                Podkłady muzyczne do książki "Gamy i pasaże - nowe spojrzenie"
+                Podkłady muzyczne do książki Gamy i pasaże - nowe spojrzenie
                 <br />
                 wydawnictwa CDE-Music
               </p>
@@ -68,8 +68,11 @@ export default function Home() {
             </div>
             <div className="bg-white p-8 rounded-xl bg-opacity-80">
               <p className="max-w-[700px] text-gray-600 text-center text-sm">
-                Aplikacja z podkładami muzycznymi do książki "Gamy i pasaże -
-                nowe spojrzenie" wydawnictwa <br />
+                Aplikacja z podkładami muzycznymi do książki{" "}
+                <span className="text-black font-bold">
+                  Gamy i pasaże - nowe spojrzenie
+                </span>{" "}
+                wydawnictwa <br />
                 CDE-Music . Książka skierowana jest do osób ćwiczących
                 indywidualnie jak i grupowo, o różnym zaawansowaniu muzycznym,
                 uczniów różnych form kształcenia muzycznego po zespoły
@@ -87,10 +90,12 @@ export default function Home() {
                 a linia melodyczna rozwija słuch muzyczny. <br />
                 <br />
                 Aplikacja zawiera 1612 podkładów muzycznych w różnych stylach.
-                Warunkiem korzystania z aplikacji jest zakupienie książki Gamy i
-                pasaże na stronie wydawnictwa www.cde-music.pl lub w sklepie
-                muzycznym w której znajdziesz indywidualny kod do korzystania z
-                aplikacji.
+                Warunkiem korzystania z aplikacji jest zakupienie książki{" "}
+                <span className="font-bold">
+                  Gamy i pasaże - nowe spojrzenie
+                </span>{" "}
+                na stronie wydawnictwa www.cde-music.pl lub w sklepie muzycznym
+                w której znajdziesz indywidualny kod do korzystania z aplikacji.
               </p>
             </div>
 
