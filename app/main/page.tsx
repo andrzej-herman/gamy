@@ -47,6 +47,16 @@ export default function Main() {
     router.push("/");
   }
 
+  if (!isLoaded) {
+    return (
+      <main className="h-full bg-yellow-100">
+        <div className="container mx-auto flex flex-col h-full items-center justify-center">
+          <p className="oczekiwanie cursor-not-allowed uprawnienia Użytkownika"></p>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="h-full bg-yellow-100">
       <div className="container mx-auto flex flex-col h-full items-center justify-center">
