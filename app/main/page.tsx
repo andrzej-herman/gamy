@@ -95,7 +95,7 @@ export default function Main() {
                   <SelectTrigger className="w-full text-gray-600">
                     <SelectValue
                       className="text-gray-600"
-                      placeholder="Wybierz numer ćwiczenia z płyty pierwszej"
+                      placeholder="Wybierz numer folderu z płyty pierwszej"
                     />
                   </SelectTrigger>
                   <SelectContent>
@@ -181,7 +181,7 @@ export default function Main() {
                   <SelectTrigger className="w-full text-gray-600">
                     <SelectValue
                       className="text-gray-600"
-                      placeholder="Wybierz numer ćwiczenia z płyty drugiej"
+                      placeholder="Wybierz numer folderu z płyty drugiej"
                     />
                   </SelectTrigger>
                   <SelectContent>

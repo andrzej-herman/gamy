@@ -1,5 +1,3 @@
-import { recordTraceEvents } from "next/dist/trace";
-
 export interface Track {
   name: string;
   path: string;
@@ -25,7 +23,7 @@ export const createP1 = (): Record => {
     if (idx === 3) continue;
     const execode = idx < 10 ? `C0${idx}` : `C${idx}`;
     let exe: Exercise = {
-      name: `Ćwiczenie nr ${idx}`,
+      name: `Folder nr ${idx}`,
       code: execode,
       tracks: [],
       numberOfTracks: "",
@@ -52,7 +50,7 @@ export const createP2 = (): Record => {
   for (let idx = 1; idx <= 26; idx++) {
     const execode = idx < 10 ? `C0${idx}` : `C${idx}`;
     let exe: Exercise = {
-      name: `Ćwiczenie nr ${idx}`,
+      name: `Folder nr ${idx}`,
       code: execode,
       tracks: [],
       numberOfTracks: "",
