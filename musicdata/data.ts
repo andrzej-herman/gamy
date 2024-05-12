@@ -34,7 +34,7 @@ export const createP1 = (): Record => {
       if (idx > 29 && ydx > 12) continue;
       const trackname = ydx < 10 ? `0${ydx}.mp3` : `${ydx}.mp3`;
       let track: Track = {
-        name: `${ydx}`,
+        name: `Ćw. ${ydx}`,
         path: `https://gamyfiles.blob.core.windows.net/p-01/${result.code}_${exe.code}_${trackname}`,
       };
       exe.tracks.push(track);
@@ -61,7 +61,7 @@ export const createP2 = (): Record => {
       if (idx > 14 && ydx > 6) continue;
       const trackname = ydx < 10 ? `0${ydx}.mp3` : `${ydx}.mp3`;
       let track: Track = {
-        name: `${ydx}`,
+        name: `Ćw. ${ydx}`,
         path: `https://gamyfiles.blob.core.windows.net/p-02/${result.code}_${exe.code}_${trackname}`,
       };
       exe.tracks.push(track);

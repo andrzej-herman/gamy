@@ -130,10 +130,10 @@ export default function Main() {
                       className="bg-yellow-100 rounded-md p-4 mb-4"
                     >
                       <div className="flex flex-col items-center justify-center gap-2">
-                        <div className="text-xs font-bold text-gray-600 flex items-center justify-center bg-yellow-400 rounded-full w-[25px] h-[25px] p-2">
+                        <div className="text-xs font-bold text-gray-600 flex items-center justify-center bg-yellow-400 rounded-md w-[60px] h-[25px] p-2">
                           {t.name}
                         </div>
-                        <audio controls controlsList="nodownload">
+                        <audio controls controlsList="nodownload" loop={true}>
                           <source src={t.path} type="audio/mp3" />
                         </audio>
                       </div>
@@ -216,10 +216,10 @@ export default function Main() {
                       className="bg-yellow-100 rounded-md p-4 mb-4"
                     >
                       <div className="flex flex-col items-center justify-center gap-1">
-                        <div className="text-xs font-bold text-gray-600 flex items-center justify-center bg-yellow-400 rounded-full w-[25px] h-[25px] p-2">
+                        <div className="text-xs font-bold text-gray-600 flex items-center justify-center bg-yellow-400 rounded-md w-[60px] h-[25px] p-2">
                           {t.name}
                         </div>
-                        <audio controls controlsList="nodownload">
+                        <audio controls controlsList="nodownload" loop={true}>
                           <source src={t.path} type="audio/mp3" />
                         </audio>
                       </div>
