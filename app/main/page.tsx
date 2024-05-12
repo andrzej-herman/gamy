@@ -119,7 +119,7 @@ export default function Main() {
                     {selectedExerciceOne.name} (P1)
                   </p>
                   <p className="font-bold text-xs text-gray-600 tracking-tight ">
-                    dostępne podkłady: {selectedExerciceOne.numberOfTracks}
+                    dostępne ćwiczenia: {selectedExerciceOne.numberOfTracks}
                   </p>
                 </div>
 
@@ -153,10 +153,10 @@ export default function Main() {
                       className="mb-1"
                     />
                     <p className="text-center text-xs text-gray-600">
-                      Proszę wybrać ćwiczenie
+                      Proszę wybrać folder
                       <br />z płyty nr 1, aby wyświetlić
                       <br />
-                      dostępne podkłady muzyczne
+                      dostępne ćwiczenia
                     </p>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export default function Main() {
                     {selectedExerciceTwo.name} (P2)
                   </p>
                   <p className="font-bold text-xs text-gray-600 tracking-tight ">
-                    dostępne podkłady: {selectedExerciceTwo.numberOfTracks}
+                    dostępne ćwiczenia: {selectedExerciceTwo.numberOfTracks}
                   </p>
                 </div>
 
@@ -239,10 +239,10 @@ export default function Main() {
                       className="mb-1"
                     />
                     <p className="text-center text-xs text-gray-600">
-                      Proszę wybrać ćwiczenie
+                      Proszę wybrać folder
                       <br />z płyty nr 2, aby wyświetlić
                       <br />
-                      dostępne podkłady muzyczne
+                      dostępne ćwiczenia
                     </p>
                   </div>
                 </div>
