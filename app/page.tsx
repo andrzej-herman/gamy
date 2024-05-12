@@ -22,13 +22,13 @@ export default function Home() {
   }
 
   return (
-    <main className="h-full bg-yellow-100">
+    <div className="md:h-screen py-6 md:py-0">
       <div className="container mx-auto h-full">
         <div className="h-full min-h-max flex flex-col items-center justify-center">
           <section className="h-full min-h-max flex flex-col items-center justify-center">
             <div className="space-y-6 text-center pb-8">
               <div className="space-y-2">
-                <div className="flex items-center justify-center">
+                <div className="hidden md:flex items-center justify-center">
                   <Image
                     src="/cde-logo.png"
                     alt="Music Cde Logo"
@@ -37,48 +37,70 @@ export default function Home() {
                     className="mb-2"
                   />
                 </div>
-
+                <div className="md:hidden flex items-center justify-center">
+                  <Image
+                    src="/cde-logo.png"
+                    alt="Music Cde Logo"
+                    width={120}
+                    height={110}
+                    className="mb-2"
+                  />
+                </div>
                 <h1
                   className={cn(
-                    "text-6xl font-semibold text-[#f2b80f] drop-shadow-md",
+                    "text-3xl md:text-6xl font-semibold text-[#f2b80f] drop-shadow-md",
                     font.className,
                   )}
                 >
                   Gamy i pasaże
                 </h1>
               </div>
-              <p className="text-gray-600 text-lg font-semibold">
-                Podkłady muzyczne do książki Gamy i pasaże - nowe spojrzenie
-                <br />
+              <p className="px-4 text-gray-600 text-sm md:text-lg font-semibold">
+                Podkłady muzyczne do książki Gamy i pasaże - nowe spojrzenie{" "}
+                <br className="hidden md:block" />
                 wydawnictwa CDE-Music
               </p>
-              <div className="flex items-center justify-center gap-x-7">
+              <div
+                className="flex flex-col md:flex-row items-center
+              justify-center gap-y-4 md:gap-y-0 gap-x-7 px-2 md:px-0"
+              >
                 <SignInButton mode="modal">
-                  <Button variant="scales" size="default" className="text-base">
+                  <Button
+                    variant="scales"
+                    size="default"
+                    className="text-sm md:text-base w-full md:w-auto"
+                  >
                     Zaloguj się
                   </Button>
                 </SignInButton>
 
                 <SignUpButton mode="modal">
-                  <Button variant="scales" size="default" className="text-base">
+                  <Button
+                    variant="scales"
+                    size="default"
+                    className="text-sm md:text-base w-full md:w-auto"
+                  >
                     Utwórz konto Użytkownika
                   </Button>
                 </SignUpButton>
               </div>
             </div>
             <div className="bg-white p-8 rounded-xl bg-opacity-80">
-              <p className="max-w-[700px] text-gray-600 text-center text-sm">
+              <p className="md:max-w-[750px] text-gray-600 text-center text-xs md:text-sm">
                 Aplikacja z podkładami muzycznymi do książki{" "}
                 <span className="text-black font-bold">
                   Gamy i pasaże - nowe spojrzenie
                 </span>{" "}
-                wydawnictwa <br />
-                CDE-Music . Książka skierowana jest do osób ćwiczących
-                indywidualnie jak i grupowo, o różnym zaawansowaniu muzycznym,
-                uczniów różnych form kształcenia muzycznego po zespoły
-                instrumentalne zawierając ćwiczenia we wszystkich tonacjach, gam
-                durowych, molowych oraz chromatycznych. <br />
-                <br />
+                wydawnictwa CDE-Music.
+              </p>
+              <p className="md:max-w-[700px] text-gray-600 text-center text-xs md:text-sm pt-3 md:pt-4">
+                Książka skierowana jest do osób ćwiczących indywidualnie jak i
+                grupowo, o różnym zaawansowaniu muzycznym, uczniów różnych form
+                kształcenia muzycznego po zespoły instrumentalne zawierając
+                ćwiczenia we wszystkich tonacjach, gam durowych, molowych oraz
+                chromatycznych.
+              </p>
+              <p className="md:max-w-[700px] text-gray-600 text-center text-xs md:text-sm pt-3 md:pt-4">
                 Innowacją książki jest możliwość realizacji danego ćwiczenia
                 przez wszystkie tonacje, jak i ćwiczenie w ramach jednej
                 tonacji. Tonacje są zintegrowane pod względem muzycznym,
@@ -87,8 +109,9 @@ export default function Home() {
                 ćwiczeń i akompaniamentów muzycznych umożliwia rozwój
                 umiejętności u ćwiczących na każdym etapie kształcenia.
                 Akompaniament pomaga ćwiczącym utrzymać puls i tempo ćwiczenia,
-                a linia melodyczna rozwija słuch muzyczny. <br />
-                <br />
+                a linia melodyczna rozwija słuch muzyczny.
+              </p>
+              <p className="md:max-w-[700px] text-gray-600 text-center text-xs md:text-sm pt-3 md:pt-4">
                 Aplikacja zawiera 1612 podkładów muzycznych w różnych stylach.
                 Warunkiem korzystania z aplikacji jest zakupienie książki{" "}
                 <span className="font-bold">
@@ -99,11 +122,13 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-12">
-              <p className="max-w-[700px] text-gray-600 text-center text-xs">
+            <div className="mt-8 md:mt-12 mb-2 md:mb-0">
+              <p className="md:max-w-[700px] text-gray-600 text-center text-[10px] md:text-sm font-bold">
                 Autor książki - Antoni Janaszewski
                 <br />
-                Opracowanie akompaniamentów i realizacja nagrań - Karol Kozan
+                Opracowanie akompaniamentów - Karol Kozan
+                <br />
+                Realizacja nagrań - Karol Kozan
                 <br />
                 Realizacja aplikacji - Andrzej Herman, Piotr Goetzen
               </p>
@@ -111,6 +136,6 @@ export default function Home() {
           </section>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

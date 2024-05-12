@@ -58,15 +58,18 @@ export default function Main() {
   }
 
   return (
-    <main className="h-full bg-yellow-100">
+    <div className="md:h-screen">
       <div className="container mx-auto flex flex-col h-full items-center justify-center">
-        <div className="w-[872px] flex border-b-2 border-b-yellow-500 items-center justify-between pb-3">
-          <h2 className="text-xl font-semibold text-[#f2b80f] drop-shadow-md">
+        <div
+          className="pt-5 md:pt-0 w-full md:w-[872px] flex border-b-2 border-b-yellow-500
+        items-center justify-between pb-2 md:pb-3"
+        >
+          <h2 className="text-base md:text-xl font-semibold text-[#f2b80f] drop-shadow-md">
             Gamy i pasaże
           </h2>
           <div className="flex items-center justify-start gap-2">
             {user && (
-              <p className="text-gray-600 text-xs">
+              <p className="text-gray-600  text-[10px] md:text-sm font-bold">
                 {user.firstName} {user.lastName}
               </p>
             )}
@@ -74,9 +77,9 @@ export default function Main() {
           </div>
         </div>
 
-        <div className="flex items-center justify-between gap-x-8 mt-5">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-y-8 md:gap-x-8 mt-5">
           {/*P1*/}
-          <div className="bg-white rounded-xl min-w-[420px] min-h-[760px]">
+          <div className="bg-white rounded-xl md:min-w-[420px] min-h-[760px]">
             <div className="flex px-8 pt-8  items-center justify-center">
               <div className="bg-yellow-400 rounded-full w-[150px] h-[150px] min-w-[150px] min-h-[150px] flex items-center justify-center">
                 <div className="bg-yellow-100 rounded-full min-w-[75px] min-h-[75px] flex items-center justify-center">
@@ -162,7 +165,7 @@ export default function Main() {
           </div>
 
           {/*P2*/}
-          <div className="bg-white rounded-xl min-w-[420px] min-h-[760px]">
+          <div className="bg-white rounded-xl md:min-w-[420px] min-h-[760px] mb-6 md:mb-0">
             <div className="flex px-8 pt-8 items-center justify-center">
               <div className="bg-yellow-400 rounded-full w-[150px] h-[150px] min-w-[150px] min-h-[150px] flex items-center justify-center">
                 <div className="bg-yellow-100 rounded-full min-w-[75px] min-h-[75px] flex items-center justify-center">
@@ -248,6 +251,6 @@ export default function Main() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

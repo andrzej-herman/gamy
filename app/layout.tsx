@@ -41,7 +41,9 @@ export default function RootLayout({
       signUpForceRedirectUrl="/main"
     >
       <html lang="pl">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <main className="bg-yellow-100 md:h-screen">{children}</main>
+        </body>
       </html>
     </ClerkProvider>
   );
