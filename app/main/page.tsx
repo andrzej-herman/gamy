@@ -31,6 +31,8 @@ export default function Main() {
 
   const selectExerciseOne = (e: string) => {
     const exe: Exercise | undefined = p1.exercises.find((x) => x.code === e);
+    setSelectedExerciceOne(undefined);
+    setSelectedExerciceTwo(undefined);
     if (exe) {
       setSelectedExerciceOne(exe);
     }
@@ -38,6 +40,8 @@ export default function Main() {
 
   const selectExerciseTwo = (e: string) => {
     const exe: Exercise | undefined = p2.exercises.find((x) => x.code === e);
+    setSelectedExerciceOne(undefined);
+    setSelectedExerciceTwo(undefined);
     if (exe) {
       setSelectedExerciceTwo(exe);
     }
@@ -49,9 +53,11 @@ export default function Main() {
 
   if (!isLoaded) {
     return (
-      <main className="h-full bg-yellow-100">
+      <main className="md:h-screen">
         <div className="container mx-auto flex flex-col h-full items-center justify-center">
-          <p className="oczekiwanie cursor-not-allowed uprawnienia Użytkownika"></p>
+          <p className="text-gray-600 text-xl">
+            oczekiwanie na uprawnienia Użytkownika
+          </p>
         </div>
       </main>
     );
