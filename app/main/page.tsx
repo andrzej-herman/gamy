@@ -10,12 +10,13 @@ import {
 import { createData, Folder, Exercise } from "@/musicdata/data";
 import React, { useState } from "react";
 import Image from "next/image";
-import { UserButton } from "@clerk/nextjs";
+import { SignOutButton } from "@clerk/nextjs";
 import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
+import { Button } from "@/components/ui/button";
 
 export default function Main() {
   const router = useRouter();
@@ -87,7 +88,11 @@ export default function Main() {
                 {user.firstName} {user.lastName}
               </p>
             )}
-            <UserButton afterSignOutUrl="/" />
+            <SignOutButton redirectUrl="/">
+              <Button variant="scales" size="sm" className="text-xs ml-2">
+                Wyloguj się
+              </Button>
+            </SignOutButton>
           </div>
         </div>
 
