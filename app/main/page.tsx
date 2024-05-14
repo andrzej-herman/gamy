@@ -25,27 +25,6 @@ export default function Main() {
   const [currentExe, setCurrentExe] = useState<Exercise | undefined>(undefined);
   const data = createData();
 
-<<<<<<< HEAD
-  const p1 = createP1();
-  const p2 = createP2();
-
-  const selectExerciseOne = (e: string) => {
-    const exe: Exercise | undefined = p1.exercises.find((x) => x.code === e);
-    setSelectedExerciceOne(undefined);
-    setSelectedExerciceTwo(undefined);
-    if (exe) {
-      setSelectedExerciceOne(exe);
-    }
-  };
-
-  const selectExerciseTwo = (e: string) => {
-    const exe: Exercise | undefined = p2.exercises.find((x) => x.code === e);
-    setSelectedExerciceOne(undefined);
-    setSelectedExerciceTwo(undefined);
-    if (exe) {
-      setSelectedExerciceTwo(exe);
-    }
-=======
   const selectFolderOne = (e: string) => {
     setFolderOne(undefined);
     const folder: Folder | undefined = data.records[0].folders.find(
@@ -76,7 +55,6 @@ export default function Main() {
 
   const pause = () => {
     setCurrentExe(undefined);
->>>>>>> remotes/origin/development
   };
 
   if (isLoaded && !isSignedIn) {
@@ -85,17 +63,11 @@ export default function Main() {
 
   if (!isLoaded) {
     return (
-<<<<<<< HEAD
-      <main className="md:h-screen">
-=======
-      <main className="h-screen bg-yellow-100">
->>>>>>> remotes/origin/development
-        <div className="container mx-auto flex flex-col h-full items-center justify-center">
-          <p className="text-gray-600 text-xl">
-            oczekiwanie na uprawnienia Użytkownika
-          </p>
-        </div>
-      </main>
+      <div className="container mx-auto flex flex-col h-full items-center justify-center">
+        <p className="text-gray-600 text-xl">
+          oczekiwanie na uprawnienia Użytkownika
+        </p>
+      </div>
     );
   }
 
