@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { SignUpButton, SignInButton, useUser } from "@clerk/nextjs";
+import Footer from "@/components/footer";
 
 const font = Poppins({
   subsets: ["latin", "latin-ext"],
@@ -121,18 +122,7 @@ export default function Home() {
                 w której znajdziesz indywidualny kod do korzystania z aplikacji.
               </p>
             </div>
-
-            <div className="mt-8 md:mt-12 mb-2 md:mb-0">
-              <p className="md:max-w-[700px] text-gray-600 text-center text-[10px] md:text-sm font-bold">
-                Autor książki - Antoni Janaszewski
-                <br />
-                Opracowanie akompaniamentów - Karol Kozan
-                <br />
-                Realizacja nagrań - Karol Kozan
-                <br />
-                Realizacja aplikacji - Andrzej Herman, Piotr Goetzen
-              </p>
-            </div>
+            <Footer page="home" />
           </section>
         </div>
       </div>
