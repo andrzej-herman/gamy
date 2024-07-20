@@ -37,8 +37,8 @@ export default function RootLayout({
     <ClerkProvider
       localization={plPL}
       publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY!}
-      signInForceRedirectUrl="/main"
-      signUpForceRedirectUrl="/main"
+      signInForceRedirectUrl="/choice"
+      signUpForceRedirectUrl="/choice"
     >
       <html lang="pl">
         <body className={inter.className}>

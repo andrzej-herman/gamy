@@ -22,18 +22,18 @@ const FolderData = ({
   return (
     <div className="pt-2 pb-4">
       <div className="px-8 mt-1 flex flex-col md:flex-row justify-center md:justify-between">
-        <p className="font-bold text-xs text-center md:text-left  text-gray-600 tracking-tight ">
+        <div className="font-bold text-xs text-center md:text-left  text-gray-600 tracking-tight ">
           {folder.name} ({record.name})
-        </p>
-        <p className="font-bold text-center md:text-right text-xs text-gray-600 tracking-tight ">
+        </div>
+        <div className="font-bold text-center md:text-right text-xs text-gray-600 tracking-tight ">
           {folder.numberOfTracks}
-        </p>
+        </div>
       </div>
       <div className="max-h-[330px] overflow-y-scroll mt-4 px-8">
         {folder.exercises.map((t) => (
           <div key={t.name} className="bg-yellow-100 rounded-md p-4 mb-4">
             <div className="flex flex-col items-center justify-center gap-2">
-              <div className="text-xs font-bold text-gray-600 flex items-center justify-center bg-yellow-400 rounded-md w-[60px] h-[25px] p-2">
+              <div className="text-xs font-bold text-gray-600 flex items-center justify-center bg-yellow-400 rounded-md w-[120px] h-[25px] p-2">
                 {t.name}
               </div>
               {!currentExercise ||
@@ -51,11 +51,11 @@ const FolderData = ({
                   onPause={pause}
                 />
               ) : (
-                <p className="min-h-[88px] flex items-center justify-center bg-red-200/40 p-2 w-full rounded-xl">
+                <div className="min-h-[88px] flex items-center justify-center bg-red-200/40 p-2 w-full rounded-xl">
                   <p className="text-[9px] md:text-xs text-center font-bold text-red-500 ">
                     zatrzymaj bieżące ćwiczenie
                   </p>
-                </p>
+                </div>
               )}
             </div>
           </div>

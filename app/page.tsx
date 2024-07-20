@@ -19,7 +19,7 @@ export default function Home() {
   const { isLoaded, isSignedIn } = useUser();
 
   if (isLoaded && isSignedIn) {
-    router.push("/main");
+    router.push("/choice");
   }
 
   return (

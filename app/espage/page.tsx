@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 
-import { createData, Folder, Exercise } from "@/musicdata/data";
+import { createBookOne, Folder, Exercise } from "@/musicdata/data";
 import React, { useState } from "react";
 import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
@@ -14,14 +14,15 @@ import RecordImage from "@/components/record-image";
 import FolderChooser from "@/components/folder-chooser";
 import Header from "@/components/header";
 import NotAuth from "@/components/not-auth";
+import { Button } from "@/components/ui/button";
 
-export default function Main() {
+export default function EsPage() {
   const router = useRouter();
   const { isLoaded, isSignedIn, user } = useUser();
   const [folderOne, setFolderOne] = useState<Folder>();
   const [folderTwo, setFolderTwo] = useState<Folder>();
   const [currentExe, setCurrentExe] = useState<Exercise | undefined>();
-  const data = createData();
+  const data = createBookOne();
 
   const selectFolderOne = (e: string) => {
     setFolderOne(undefined);
@@ -55,6 +56,14 @@ export default function Main() {
     setCurrentExe(undefined);
   };
 
+  const backToInstruments = () => {
+    router.push("/choice");
+  };
+
+  const backToBooks = () => {
+    router.push("/books");
+  };
+
   if (isLoaded && !isSignedIn) {
     router.push("/");
   }
@@ -67,12 +76,15 @@ export default function Main() {
     <div className="md:h-screen">
       <div className="container mx-auto flex flex-col h-full items-center justify-center">
         <Header user={user} />
+        <div className="mt-5 bg-yellow-200 p-4 w-full md:w-[940px] text-center text-md font-bold text-gray-600 rounded-xl">
+          {data.title}
+        </div>
         <ExeDescription exercise={currentExe} />
-        <div className="flex flex-col md:flex-row items-center justify-between gap-y-8 gap-x-0 md:gap-x-8 mt-3 mb-5 p-0">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-y-8 gap-x-0 md:gap-x-8 mt-5 mb-2 p-0">
           {data.records.map((r) => (
             <div
-              key={r.name}
-              className="bg-white rounded-xl w-full md:w-[420px] md:min-w-[420px] min-h-[560px]"
+              key={r.title}
+              className="bg-white rounded-xl w-full md:w-[450px] md:min-w-[450px] min-h-[560px]"
             >
               <RecordImage record={r} />
               <FolderChooser
@@ -107,6 +119,18 @@ export default function Main() {
               )}
             </div>
           ))}
+        </div>
+        <div className="mt-5 w-[940px] flex items-center justify-between gap-5">
+          <Button variant="scales" className="w-full" onClick={backToBooks}>
+            Powrót do wyboru książek
+          </Button>
+          <Button
+            variant="scales"
+            className="w-full"
+            onClick={backToInstruments}
+          >
+            Powrót do wyboru instrumentów
+          </Button>
         </div>
         <Footer page="main" />
       </div>

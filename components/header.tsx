@@ -12,7 +12,7 @@ interface HeaderProps {
 export default function Header({ user }: HeaderProps) {
   return (
     <div
-      className="pt-5 md:pt-0 w-full md:w-[872px] flex border-b-2 border-b-yellow-500
+      className="pt-5 md:pt-0 w-full md:w-[940px] flex border-b-2 border-b-yellow-500
           items-center justify-between pb-2 md:pb-3"
     >
       <h2 className="text-base md:text-xl font-semibold text-[#f2b80f] drop-shadow-md">

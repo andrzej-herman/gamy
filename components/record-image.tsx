@@ -9,18 +9,14 @@ interface RecordImageProps {
 
 const RecordImage = ({ record }: RecordImageProps) => {
   return (
-    <div className="flex px-8 pt-8  items-center justify-center">
+    <div className="flex px-8 pt-8 items-center justify-center">
       <div
-        className="bg-yellow-400 rounded-full w-[100px] h-[100px] min-w-[100px] min-h-[100px]
-                flex items-center justify-center"
+        className="w-full bg-yellow-100 rounded-xl min-w-[100px] min-h-[50px] flex
+                  items-center justify-center text-sm tracking-tight font-bold text-gray-600 px-5"
       >
-        <div
-          className="bg-yellow-100 rounded-full min-w-[50px] min-h-[50px] flex
-                  items-center justify-center"
-        >
-          <p className="text-xl tracking-tight font-bold text-gray-600">
-            {record.name}
-          </p>
+        <div className="flex flex-col space-y-2 text-center py-3">
+          <div>{record.title}</div>
+          <div>{record.subtitle}</div>
         </div>
       </div>
     </div>
